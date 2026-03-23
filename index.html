@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek Jha | Software Engineer</title>
+    <meta name="description" content="Portfolio of Prateek Jha, Software Engineer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Mouse Ambient Light -->
+    <div class="mouse-glow"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <video id="slashVideo" class="slash-video" src="video 1 port.mp4" muted playsinline></video>
+        <div class="brand-strike"></div>
+        <div class="brand-text">PJ</div>
+    </div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Decorative Big Text Background -->
+    <div class="bg-kanji" data-speed="0.2">無の境地</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="hanko">PJ</span>
+                <span class="logo-text">Prateek Jha</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about-me" class="hover-target">About</a>
+                <a href="#skills" class="hover-target">Skills</a>
+                <a href="#experience" class="hover-target">Experience</a>
+                <a href="#projects" class="hover-target">Projects</a>
+                <a href="#education" class="hover-target">Journey</a>
+                <a href="#contact" class="hover-target">Contact</a>
+            </div>
+            <div class="mobile-menu-btn hover-target">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section-padding">
+            <div class="hero-content fade-in-up">
+                <div class="subtitle-wrap">
+                    <span class="slash-decorator"></span>
+                    <p class="subtitle">Software Engineer</p>
+                </div>
+                
+                <h1 class="title glitch hover-target" data-text="PRATEEK JHA">PRATEEK JHA</h1>
+                
+                <p class="philosophy staggered-fade">"Focus on the present. Optimize for the future. True strength lies in unwavering discipline."</p>
+                
+                <div class="hero-actions staggered-fade">
+                    <a href="#projects" class="btn primary-btn hover-target">View Mastery <i data-lucide="arrow-right"></i></a>
+                    <a href="resume.pdf" target="_blank" class="btn outline-btn hover-target" id="resumeBtn">Resume <i data-lucide="download"></i></a>
+                    <div class="contact-links">
+                        <a href="mailto:prateekjha369@gmail.com" class="social-icon hover-target" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/prateek-jha-dev" class="social-icon hover-target" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://github.com/prateekjhaa369" class="social-icon hover-target" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-text scroll-reveal">ソフトウェアエンジニア</div>
+            <div class="scroll-indicator hover-target">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about-me" class="about-me section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">The Ronin</h2>
+                <span class="section-kanji">自己</span>
+            </div>
+            <div class="about-content fade-in-up">
+                <p class="about-text" id="aboutTextPlaceholder">Driven by the philosophy of continuous optimization, I engineer applications that don't just work—they scale. From developing Vector-based Semantic Search Engines to architecting Secure Fintech APIs, my work is defined by a commitment to technical rigor and performance. I thrive at the intersection of Full-Stack development and Machine Learning, constantly pushing my boundaries to master the architectural nuances of FAANG-level systems.</p>
+                <div class="about-stats">
+                    <div class="stat-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <span class="stat-num">300+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                    </div>
+                    <div class="stat-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <span class="stat-num">9+</span>
+                            <span class="stat-label">Major Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Skills</h2>
+                <span class="section-kanji">武器</span>
+            </div>
+            <div class="skills-grid staggered-container">
+                <div class="skill-category card tilt-card">
+                    <div class="card-inner">
+                        <div class="card-icon"><i data-lucide="code-2"></i></div>
+                        <h3>Languages</h3>
+                        <div class="tags">
+                            <span class="tag hover-target">Java</span>
+                            <span class="tag hover-target">Python</span>
+                            <span class="tag hover-target">JavaScript</span>
+                            <span class="tag hover-target">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category card tilt-card">
+                    <div class="card-inner">
+                        <div class="card-icon"><i data-lucide="brain-circuit"></i></div>
+                        <h3>Core Concepts</h3>
+                        <div class="tags">
+                            <span class="tag hover-target">DSA</span>
+                            <span class="tag hover-target">System Design</span>
+                            <span class="tag hover-target">Microservices</span>
+                            <span class="tag hover-target">DBMS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category card tilt-card">
+                    <div class="card-inner">
+                        <div class="card-icon"><i data-lucide="globe"></i></div>
+                        <h3>Frameworks & DBs</h3>
+                        <div class="tags">
+                            <span class="tag hover-target">React / Node.js</span>
+                            <span class="tag hover-target">FastAPI</span>
+                            <span class="tag hover-target">Supabase</span>
+                            <span class="tag hover-target">PostgreSQL</span>
+                            <span class="tag hover-target">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category card tilt-card">
+                    <div class="card-inner">
+                        <div class="card-icon"><i data-lucide="terminal"></i></div>
+                        <h3>Dev & Data Tools</h3>
+                        <div class="tags">
+                            <span class="tag hover-target">Docker</span>
+                            <span class="tag hover-target">Apache Kafka</span>
+                            <span class="tag hover-target">Redis</span>
+                            <span class="tag hover-target">Pinecone</span>
+                            <span class="tag hover-target">Pandas / NumPy</span>
+                            <span class="tag hover-target">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">The Path</h2>
+                <span class="section-kanji">経験</span>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role">Software Engineer Intern</h3>
+                                    <p class="company"><i data-lucide="building-2"></i> JPMorgan Chase & Co. (Forage) Remote</p>
+                                </div>
+                                <div class="date-badge">Jan 2026</div>
+                            </div>
+                            <ul class="duties">
+                                <li>Engineered a high-performance data feed handler using <strong>Python</strong> to process <strong>500+ stock metrics/sec</strong>, ensuring zero-latency synchronization across distributed systems.</li>
+                                <li>Refactored 3 legacy system modules to resolve critical calculation discrepancies, successfully increasing data reporting accuracy by <strong>15%</strong> via comprehensive <strong>Unit Testing</strong>.</li>
+                                <li>Developed an interactive trading dashboard using <strong>React</strong>, enabling traders to visualize real-time stock trends with <strong>100ms update rates</strong> for faster decision-making.</li>
+                            </ul>
+                            <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_kav4wokZL8Y34jrDN_1768832310442_completion_certificate.pdf" target="_blank" class="credential-btn hover-target">
+                                <span>Verify Credential</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cinematic Divider -->
+        <section class="cinematic-divider">
+            <video class="divider-video" src="video 3 port.mp4" autoplay loop muted playsinline></video>
+            <div class="divider-overlay"></div>
+            <div class="divider-content">
+                <p class="divider-quote">"Step by step walk the thousand-mile road."</p>
+                <span class="divider-kanji">決意</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="unveil-wrapper">
+                <div class="unveil-sticky">
+                    <div class="section-header unveil-header fade-in-up">
+                        <h2 class="section-title">Projects</h2>
+                        <span class="section-kanji">作品</span>
+                    </div>
+                    <canvas class="unveil-canvas" style="display:none"></canvas>
+                    <div class="unveil-perspective">
+
+                        <!-- Project 1: AltoStratos -->
+                        <div class="unveil-card" data-index="0">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">KM</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/AltoStratos.png" alt="AltoStratos Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>AltoStratos – Knowledge Management Platform</h3>
+                                            <p class="tech-stack">React • Vite • Supabase • PostgreSQL</p>
+                                        </div>
+                                        <div class="date-badge outline">2026</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Built a full-stack bookmarking platform enabling users to save, tag, and organize web content into <strong>topic-based collections</strong>.</li>
+                                        <li>Implemented <strong>secure authentication</strong>, real-time database operations, and a reader-focused content view for long-term knowledge retrieval.</li>
+                                        <li>Designed a responsive dashboard with <strong>tag filtering, search, and collection grouping</strong> for intuitive navigation across all saved resources.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Real-Time Semantic Intelligence Engine -->
+                        <div class="unveil-card" data-index="1">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">AI</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/RealTimeSemantic based search Engine.png" alt="Real-Time Semantic Engine Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Real-Time Semantic Intelligence Engine</h3>
+                                            <p class="tech-stack">Tinybird • Pinecone • FastAPI • Redis</p>
+                                        </div>
+                                        <div class="date-badge outline">Feb 2026</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Architected a unified data platform to process and semantically index <strong>1,000+ financial events/sec</strong> for real-time anomaly detection.</li>
+                                        <li>Engineered a high-speed pipeline transforming raw transaction streams into vector embeddings for <strong>natural language querying</strong> over live datasets.</li>
+                                        <li>Implemented Materialized Views and IVF Optimization for <strong>sub-10ms retrieval latency</strong>, bridging Big Data and AI-retrieval.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369/realtime-semantic-engine" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Secure Fintech API -->
+                        <div class="unveil-card" data-index="2">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">SEC</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Secure Fintech API.png" alt="Secure Fintech API Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Secure Fintech User Management API</h3>
+                                            <p class="tech-stack">Supabase • PostgreSQL • JWT</p>
+                                        </div>
+                                        <div class="date-badge outline">Dec 2025</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Designed a robust backend utilizing Supabase with <strong>Row-Level Security (RLS)</strong>, ensuring 100% data isolation for 5k+ sensitive financial profiles.</li>
+                                        <li>Implemented <strong>JWT-based Authentication</strong> and custom middleware, decreasing unauthorized access attempts by 95%.</li>
+                                        <li>Engineered a database schema optimized for high-integrity transaction logic with strict <strong>ACID compliance</strong> under heavy loads.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369/secure-fintech-api" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Google Data Analysis -->
+                        <div class="unveil-card" data-index="3">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">DATA</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Google dashboard.png" alt="Google Data Analysis Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Google Data Analysis – End-to-End Analytics</h3>
+                                            <p class="tech-stack">Python • Pandas • NumPy • Matplotlib • Seaborn • Jupyter</p>
+                                        </div>
+                                        <div class="date-badge outline">2025</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Built a full analysis pipeline from raw data to final insights: cleaning, feature engineering, EDA, and <strong>actionable business recommendations</strong>.</li>
+                                        <li>Identified trends, seasonality, and user behavior patterns using <strong>statistical summaries and comparative analysis</strong>.</li>
+                                        <li>Created clear visual narratives for non-technical stakeholders with reproducible notebooks for transparency and future reuse.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: Netflix EDA -->
+                        <div class="unveil-card" data-index="4">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">EDA</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Netflix dashboard.png" alt="Netflix EDA Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Netflix Movies Data Analysis (EDA)</h3>
+                                            <p class="tech-stack">Python • Pandas • Matplotlib • Seaborn • Jupyter</p>
+                                        </div>
+                                        <div class="date-badge outline">2025</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Performed end-to-end EDA on a Netflix movie dataset: cleaned missing values, fixed formats, and transformed data types for <strong>reliable analysis</strong>.</li>
+                                        <li>Identified Drama as the most frequent genre, and 2020 as the peak release year — revealing a <strong>notable shift in content output</strong>.</li>
+                                        <li>Visualized popularity patterns, vote metrics, and genre distribution to turn raw entertainment data into <strong>actionable audience insights</strong>.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Weather App -->
+                        <div class="unveil-card" data-index="5">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">API</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Live Weather API.png" alt="Weather App Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Live Weather App</h3>
+                                            <p class="tech-stack">HTML • CSS • JavaScript • Weather API</p>
+                                        </div>
+                                        <div class="date-badge outline">2025</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Built a clean, responsive web app showing <strong>real-time weather conditions and forecasts</strong> for any city using live API data.</li>
+                                        <li>Designed a user-friendly interface focused on <strong>fast, intuitive weather checks</strong> across desktop and mobile devices.</li>
+                                        <li>Integrated live API calls with dynamic UI updates for <strong>instant feedback</strong> on city search queries.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: Real-Time Sentiment Analysis -->
+                        <div class="unveil-card" data-index="6">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">NLP</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Real-Time Sentiment Intelligence Platform.png" alt="Sentiment Analysis Platform Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Real-Time Sentiment Analysis Platform</h3>
+                                            <p class="tech-stack">Apache Kafka • FastAPI • React • Docker</p>
+                                        </div>
+                                        <div class="date-badge outline">2026</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Built an end-to-end real-time analytics platform streaming social text through <strong>Apache Kafka</strong>, processed by a Python FastAPI backend.</li>
+                                        <li>Classified incoming messages as positive, negative, or neutral and visualized <strong>live trend charts and keyword-level sentiment signals</strong> in a React dashboard.</li>
+                                        <li>Containerized the full system with <strong>Docker</strong>, demonstrating event-driven architecture and real-time data pipelines.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: PulsePad -->
+                        <div class="unveil-card" data-index="7">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">COLLAB</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Pulse Pad.png" alt="PulsePad Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>PulsePad – Real-Time Collaborative Text Editor</h3>
+                                            <p class="tech-stack">WebSockets • Microservices • OT Algorithm</p>
+                                        </div>
+                                        <div class="date-badge outline">2026</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Built a full-stack collaborative editor supporting <strong>simultaneous multi-user editing</strong> with live synchronization and no conflict overwrite.</li>
+                                        <li>Implemented <strong>Operational Transformation</strong> for conflict resolution, ensuring consistent document state across all connected clients.</li>
+                                        <li>Designed a <strong>scalable microservices architecture</strong> with socket-based communication and persistent document storage.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 9: Fusion Electronics -->
+                        <div class="unveil-card" data-index="8">
+                            <div class="project-card card tilt-card">
+                                <div class="card-inner">
+                                    <div class="project-bg-text">MERN</div>
+                                    <div class="project-img-wrap">
+                                        <img src="Projects/Nova tech store.png" alt="Fusion Electronics Screenshot" class="project-img">
+                                    </div>
+                                    <div class="project-header">
+                                        <div class="project-title-wrap">
+                                            <h3>Fusion Electronics – AI-Powered MERN E-Commerce</h3>
+                                            <p class="tech-stack">MongoDB • Express.js • React • Node.js • Vector Search</p>
+                                        </div>
+                                        <div class="date-badge outline">2026</div>
+                                    </div>
+                                    <ul class="duties">
+                                        <li>Built a full-stack e-commerce platform with <strong>secure authentication, product/order management</strong>, and complete checkout workflows.</li>
+                                        <li>Integrated <strong>semantic product search with vector indexing</strong> for faster, more relevant product discovery powered by AI embeddings.</li>
+                                        <li>Implemented a scalable MERN architecture with clean REST APIs, <strong>admin dashboards</strong>, and a responsive storefront UX.</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="https://github.com/prateekjhaa369" target="_blank" class="credential-btn hover-target">
+                                            <i data-lucide="github"></i> Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements Section -->
+        <section id="certifications" class="certifications section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">CP & Hackathons</h2>
+                <span class="section-kanji">競争</span>
+            </div>
+            
+            <div class="cert-achieve-container">
+                <div class="certifications-list staggered-container">
+                    <h3 class="sub-section-title fade-in-up"><span class="slash-decorator"></span> Certifications</h3>
+                    
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/4ICM1GK63SBM" target="_blank" class="cert-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="cert-info">
+                                <h4>Meta Back-End Developer</h4>
+                                <p class="issuer">Meta <span class="dot">•</span> 2026</p>
+                            </div>
+                            <div class="cert-icon"><i data-lucide="award"></i></div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.coursera.org/account/accomplishments/records/4OSCBFLWNDWB" target="_blank" class="cert-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="cert-info">
+                                <h4>AWS Architecting Solutions</h4>
+                                <p class="issuer">Amazon Web Services <span class="dot">•</span> 2026</p>
+                            </div>
+                            <div class="cert-icon"><i data-lucide="cloud"></i></div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/HRYA6I5M81HM" target="_blank" class="cert-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="cert-info">
+                                <h4>Google Cloud Digital Leader</h4>
+                                <p class="issuer">Google Cloud <span class="dot">•</span> 2026</p>
+                            </div>
+                            <div class="cert-icon"><i data-lucide="cloud-lightning"></i></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="achievements-list staggered-container">
+                    <h3 class="sub-section-title fade-in-up"><span class="slash-decorator"></span> Achievements & Hackathons</h3>
+                    
+                    <div class="achievement-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="achieve-icon-wrap"><i data-lucide="terminal-square" class="accent-icon"></i></div>
+                            <div class="achieve-content">
+                                <h4>[Hackathon Name / Open Source]</h4>
+                                <p>[Placeholder: Describe your hackathon win, participation, or open-source contribution here.]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="achieve-icon-wrap"><i data-lucide="swords" class="accent-icon"></i></div>
+                            <div class="achieve-content">
+                                <h4>LeetCode Specialist</h4>
+                                <p>Solved 300+ DSA Problems (Arrays, Stacks, Linked Lists) with a max streak of 21 days.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item card tilt-card hover-target">
+                        <div class="card-inner">
+                            <div class="achieve-icon-wrap"><i data-lucide="flame" class="accent-icon"></i></div>
+                            <div class="achieve-content">
+                                <h4>Top Performer</h4>
+                                <p>Consistently ranked in the top percentile for runtime efficiency on LeetCode submissions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Foundation</h2>
+                <span class="section-kanji">基礎</span>
+            </div>
+            
+            <div class="education-grid staggered-container">
+                <div class="edu-card card tilt-card">
+                    <div class="card-inner">
+                        <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+                        <div class="edu-header">
+                            <h3>B.Tech - Computer Science</h3>
+                            <div class="date-badge outline">2023 – 2027</div>
+                        </div>
+                        <p class="institution">Lovely Professional University, Phagwara</p>
+                        <div class="grade-box">CGPA: <span class="grade-val">6.92</span></div>
+                    </div>
+                </div>
+                
+                <div class="edu-card card tilt-card">
+                    <div class="card-inner">
+                        <div class="edu-icon"><i data-lucide="book-open"></i></div>
+                        <div class="edu-header">
+                            <h3>Senior Secondary (12th Grade)</h3>
+                            <div class="date-badge outline">2022</div>
+                        </div>
+                        <p class="institution">Modern School, Patna</p>
+                        <div class="grade-box">Score: <span class="grade-val">64%</span></div>
+                    </div>
+                </div>
+                
+                <div class="edu-card card tilt-card">
+                    <div class="card-inner">
+                        <div class="edu-icon"><i data-lucide="book"></i></div>
+                        <div class="edu-header">
+                            <h3>Secondary (10th Grade)</h3>
+                            <div class="date-badge outline">2020</div>
+                        </div>
+                        <p class="institution">Modern School, Patna</p>
+                        <div class="grade-box">Score: <span class="grade-val">81.4%</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Challenge Me</h2>
+                <span class="section-kanji">連絡</span>
+            </div>
+            <div class="contact-content card tilt-card fade-in-up">
+                <div class="card-inner contact-inner">
+                    <div class="contact-info">
+                        <h3>Let's forge something great.</h3>
+                        <p class="contact-desc">Currently open for new opportunities, collaborations, and hackathons.</p>
+                        
+                        <div class="contact-details">
+                            <a href="mailto:prateekjha369@gmail.com" class="contact-item hover-target">
+                                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                                <span>prateekjha369@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required class="form-input hover-target">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required class="form-input hover-target">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required class="form-input hover-target"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn hover-target">Send Message <i data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <video class="footer-video" src="video 2 port.mp4" autoplay loop muted playsinline></video>
+        <div class="footer-overlay"></div>
+        <div class="footer-content fade-in-up">
+            <div class="hanko hanko-large hover-target">PJ</div>
+            <p class="quote">"There is nothing outside of yourself that can ever enable you to get better, stronger, richer, quicker, or smarter. Everything is within."</p>
+            <p class="quote-author">— Miyamoto Musashi</p>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="year">2026</span> Prateek Jha. Crafted with discipline.</p>
+                <div class="back-to-top hover-target" id="backToTop">
+                    <i data-lucide="arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
