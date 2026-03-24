@@ -5,27 +5,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const brandStrike = document.querySelector('.brand-strike');
     const slashVideo = document.querySelector('.slash-video');
     
-    // Simulate loading time, animate slash, then hide
-    setTimeout(() => {
-        if(slashVideo) {
+    // Make preloader video playback resilient across browsers and slow networks.
+    if (slashVideo) {
+        const tryPlayPreloaderVideo = () => {
             slashVideo.style.opacity = '0.7';
-            slashVideo.play().catch(e => console.log("Video play failed:", e));
-        }
+            slashVideo.play().catch(() => {});
+        };
 
+        slashVideo.muted = true;
+        slashVideo.defaultMuted = true;
+        slashVideo.playsInline = true;
+        slashVideo.preload = 'auto';
+        slashVideo.addEventListener('loadeddata', tryPlayPreloaderVideo, { once: true });
+        slashVideo.addEventListener('canplay', tryPlayPreloaderVideo, { once: true });
+        slashVideo.addEventListener('error', () => {
+            slashVideo.style.opacity = '0';
+        }, { once: true });
+
+        slashVideo.load();
+        tryPlayPreloaderVideo();
+    }
+
+    // Run slash animation and hide preloader.
+    setTimeout(() => {
         brandStrike.style.width = '100px';
         brandStrike.style.transition = 'width 0.3s cubic-bezier(0.25, 1, 0.5, 1)';
-        
+
         setTimeout(() => {
             preloader.style.opacity = '0';
             preloader.style.visibility = 'hidden';
-            
+
             // Trigger initial animations for hero
             document.querySelectorAll('#hero .fade-in-up').forEach((el, i) => {
                 setTimeout(() => {
                     el.classList.add('animate');
                 }, i * 200);
             });
-            
+
             // Stagger hero children
             const heroStaggered = document.querySelectorAll('#hero .staggered-fade');
             heroStaggered.forEach((el, i) => {
@@ -34,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.classList.add('animate');
                 }, 500 + (i * 150));
             });
-            
+
         }, 500);
     }, 1200);
 
