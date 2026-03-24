@@ -695,6 +695,35 @@ a {
     gap: 3rem;
 }
 
+.about-intro {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-photo-card {
+    max-width: 260px;
+}
+
+.about-photo-card .card-inner {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-photo {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 0 6px rgba(255, 0, 60, 0.08);
+    filter: grayscale(0.04) contrast(1.05);
+}
+
 .about-text {
     font-size: 1.15rem;
     color: var(--text-secondary);
@@ -1285,6 +1314,54 @@ a {
     font-size: 0.9rem;
 }
 
+/* Book Section */
+.book-inner {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.book-cover-wrap {
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.02);
+    overflow: hidden;
+}
+
+.book-cover-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.book-card:hover .book-cover-img {
+    transform: scale(1.03);
+}
+
+.book-details h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+}
+
+.book-subtitle {
+    color: var(--accent-red);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.book-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+}
+
+.book-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 /* Education */
 .education-grid {
     display: grid;
@@ -1658,6 +1735,20 @@ textarea.form-input {
     .cert-achieve-container {
         grid-template-columns: 1fr;
     }
+
+    .about-intro,
+    .book-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo-card {
+        max-width: 220px;
+    }
+
+    .about-photo {
+        width: 180px;
+        height: 180px;
+    }
     
     .glitch {
         font-size: 4rem;
@@ -1680,6 +1771,15 @@ textarea.form-input {
 @media (max-width: 600px) {
     .nav-links {
         display: none;
+    }
+
+    .about-photo-card {
+        max-width: 180px;
+    }
+
+    .about-photo {
+        width: 150px;
+        height: 150px;
     }
     
     .mobile-menu-btn {

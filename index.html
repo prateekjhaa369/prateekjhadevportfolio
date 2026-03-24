@@ -52,6 +52,7 @@
                 <a href="#skills" class="hover-target">Skills</a>
                 <a href="#experience" class="hover-target">Experience</a>
                 <a href="#projects" class="hover-target">Projects</a>
+                <a href="#book" class="hover-target">Book</a>
                 <a href="#education" class="hover-target">Journey</a>
                 <a href="#contact" class="hover-target">Contact</a>
             </div>
@@ -100,11 +101,18 @@
         <!-- About Me Section -->
         <section id="about-me" class="about-me section-padding">
             <div class="section-header fade-in-up">
-                <h2 class="section-title">Professional Summary</h2>
+                <h2 class="section-title">About Me</h2>
                 <span class="section-kanji">自己</span>
             </div>
             <div class="about-content fade-in-up">
-                <p class="about-text" id="aboutTextPlaceholder">Driven by the philosophy of continuous optimization, I engineer applications that don't just work—they scale. From developing Vector-based Semantic Search Engines to architecting Secure Fintech APIs, my work is defined by a commitment to technical rigor and performance. I thrive at the intersection of Full-Stack development and Machine Learning, constantly pushing my boundaries to master the architectural nuances of FAANG-level systems.</p>
+                <div class="about-intro">
+                    <div class="about-photo-card card tilt-card hover-target">
+                        <div class="card-inner">
+                            <img src="Book/profile/profile-picture.jpeg" alt="Prateek Jha profile picture" class="about-photo">
+                        </div>
+                    </div>
+                    <p class="about-text" id="aboutTextPlaceholder">I am a software engineer focused on building scalable, production-ready systems with measurable impact. My work spans full-stack development, real-time data pipelines, and AI-powered applications. I approach engineering with discipline, strong ownership, and a performance mindset, continuously improving through hands-on projects, competitive programming, and practical system design.</p>
+                </div>
                 <div class="about-stats">
                     <div class="stat-item card tilt-card hover-target">
                         <div class="card-inner">
@@ -593,6 +601,34 @@
             </div>
         </section>
 
+        <!-- Book Section -->
+        <section id="book" class="book section-padding">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Published Book</h2>
+                <span class="section-kanji">著作</span>
+            </div>
+            <div class="book-card card tilt-card hover-target fade-in-up">
+                <div class="card-inner book-inner">
+                    <div class="book-cover-wrap">
+                        <img src="Book/book-cover.png" alt="Book cover" class="book-cover-img">
+                    </div>
+                    <div class="book-details">
+                        <h3>How I Am Preparing for Coding Interviews</h3>
+                        <p class="book-subtitle">A Beginner's Journey in DSA, Discipline, and Problem Solving</p>
+                        <p class="book-description">I wrote this book to help students and early engineers build a practical coding interview roadmap. It focuses on consistency, core problem-solving patterns, and disciplined preparation strategies that work in the real world.</p>
+                        <div class="book-actions">
+                            <a href="https://www.amazon.in/Preparing-Interviews-Beginners-Journey-Discipline-ebook/dp/B0GTDHPBQF/ref=sr_1_2?crid=XLATOT9QDLAU&dib=eyJ2IjoiMSJ9.rwbvgAv1klTVjYQh_qe60kL-e9Fqpg79IM-wxot85dEhPNdgYR6kUPrpZaoB80LP.Ome-TsyjcLnvbZCNOTWE8pzaIVET_OVVLYEo3UMXTw8&dib_tag=se&keywords=prateek+jha&qid=1774330649&s=books&sprefix=prateek+j%2Cstripbooks%2C445&sr=1-2" target="_blank" class="btn primary-btn hover-target">
+                                Buy on Amazon <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="Book/preparing-for-coding-interviews.pdf" target="_blank" class="btn outline-btn hover-target">
+                                Read Sample <i data-lucide="book-open"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section id="education" class="education section-padding">
             <div class="section-header fade-in-up">
@@ -736,7 +772,6 @@
 
     <script src="script.js"></script>
     <script>
-        lucide.createIcons();
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>

@@ -384,4 +384,9 @@ document.addEventListener('DOMContentLoaded', () => {
         resize();
         animate();
     }
+    
+    /* 11. Initialize Lucide Icons */
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
