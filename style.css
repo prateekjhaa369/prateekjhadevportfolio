@@ -544,6 +544,14 @@ a {
     align-items: center;
     border-radius: 50%;
     color: var(--text-secondary);
+    transition: var(--transition-fast);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
 }
 
 .social-icon:hover {
