@@ -1425,6 +1425,125 @@ footer {
     color: #fff;
 }
 
+/* Beyond Engineering Section */
+.beyond-code {
+    background: linear-gradient(135deg, rgba(255,0,60,0.02) 0%, transparent 100%);
+    border-top: 1px solid rgba(255,0,60,0.1);
+}
+
+.beyond-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.beyond-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.beyond-text > p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.achievement-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,0,60,0.15);
+    border-radius: 8px;
+    transition: var(--transition-fast);
+}
+
+.highlight:hover {
+    background: rgba(255,0,60,0.05);
+    border-color: var(--accent-red);
+    transform: translateX(8px);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    display: block;
+}
+
+.highlight p {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.highlight strong {
+    color: var(--accent-red);
+    font-weight: 700;
+}
+
+.beyond-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item .card-inner {
+    padding: 0;
+    flex-direction: column;
+    gap: 0;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+    filter: brightness(0.9) saturate(0.95);
+}
+
+.card:hover .gallery-img {
+    transform: scale(1.08);
+    filter: brightness(1) saturate(1);
+}
+
+.gallery-caption {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    margin: 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .beyond-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .beyond-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Contact Section */
 .contact-inner {
     display: grid;
