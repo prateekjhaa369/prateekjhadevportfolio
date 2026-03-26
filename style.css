@@ -1322,6 +1322,52 @@ a {
     font-size: 0.9rem;
 }
 
+.leetcode-handle {
+    color: #ffd8e2;
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.leetcode-inline-link {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+}
+
+.leetcode-inline-link:hover {
+    color: var(--accent-red);
+}
+
+.achievement-mini-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid rgba(255, 0, 60, 0.45);
+    border-radius: 4px;
+    background: rgba(255, 0, 60, 0.1);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #ffd8e2;
+    text-transform: uppercase;
+}
+
+.achievement-mini-link:hover {
+    color: #ffffff;
+    background: rgba(255, 0, 60, 0.2);
+    border-color: var(--accent-red);
+}
+
+.achievement-mini-link i {
+    width: 14px;
+    height: 14px;
+}
+
 /* Book Section */
 .book-inner {
     display: grid;
